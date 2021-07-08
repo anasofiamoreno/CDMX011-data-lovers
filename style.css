@@ -1,0 +1,8 @@
+div[id="panelinformacion"]{
+    width: 400px;
+    height: 300px;
+    border: black 1px solid;
+    position: absolute;
+    top: 140px; left: 400px;
+    
+}
