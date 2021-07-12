@@ -8,13 +8,29 @@ var sortby="name";
 var soryOrder="asc";
 
 
-var propertyFiltro1= Object.keys(data.pokemon[0]).sort()
-console.log(propertyFiltro1)
-console.log(addOptions(propertyFiltro1))
+var propertyFiltro1= Object.keys(data.pokemon[0]) //recuperamos propiedades
+     propertyFiltro1.splice(3,2) //quitamos en el array de propiedades img y about (no queremos que este en nuestro menu)
+     propertyFiltro1.sort() //lo ordenamos alfabeticamente para mostrar en menú
+
+     addOptions(propertyFiltro1) //llena el selector del filtro 1
+     
+     
+     addListPok(data) //Muestra todos los pokemons en pantalla
+
 //console.log (sortData (data,sortby,soryOrder));
 
-function addOptions(prop) {
+function addListPok(data){ // En esta funcion llenamos la lista para mostrar todos lo pokemon en pantalla
+  var listPok = data.pokemon.map(function(pok){
+  return '<li><figure><a href=pokemon.html><img src='+pok.img+'></a><figure> '+pok.name+'</li>'
+})
+document.getElementById("listPok").innerHTML = listPok.join(""); //con el metodo join quitamos , de la lsta para que no aparezca en pantalla la coma despues de cada imag
+}
+
+
+function addOptions(prop) { //En esta funciòn llenamos el filtro1 con las propieades excepto img y about
+
   const objFiltoUno = document.getElementById("filtrouno");
+  
   
   for (let value in prop) {
    var option = document.createElement("option");

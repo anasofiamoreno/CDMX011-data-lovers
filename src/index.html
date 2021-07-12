@@ -13,12 +13,9 @@
       <p>Menu de Filtrado</p>
       <p>Sofia Moreno</p>
 
-      <select name="filtrouno" id="filtrouno">
-       <!-- <option value="Numero de pokemon">Numero de Pokemon</option>
-        <option value="Tipo de Pokemon">Tipo de Pokemon</option>-->
-       
-      </select>
-
+      <section> <!--Seccion de Filtros-->
+      <select name="filtrouno" id="filtrouno"></select> <!--Se llena el selct desde js filtro1-->
+      
       <input id=txbxnumeropokemon type="number"></p>
 
       <select name="filtrodos" id="filtrodos">
@@ -26,26 +23,19 @@
         <option value="pison">Veneno</option>
         <option value="water">Agua</option>
       </select>
-
+      
       
 
       <input id="btnbuscar" type="button" value="Buscar">
+      </section> 
 
-    </form>
+      <section><div id='listPok'  class="flex-container"></div></section> <!--Se crea la lista de imag de cada pokemon desde js-->
+        
+      
 
-    <form id="formsalidadedatos">
-      <div id="panelinformacion">
-        <p id="test">Texto de Prueba</p>
-      </div>
+      
 
-      <ul class="flex-container">
-        <li class="flex-item">pokemonsito</li>
-
-      </ul>
-
-
-
-    </form>
+    
 
    
 

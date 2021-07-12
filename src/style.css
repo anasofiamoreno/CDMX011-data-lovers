@@ -9,10 +9,11 @@ div[id="panelinformacion"]{
 
 HTML CSSResult Skip Results Iframe
 EDIT ON
+
 .flex-container {
   /* We first create a flex layout context */
   display: flex;
-  
+   max-inline-size: 1440px;
   /* Then we define the flow direction 
      and if we allow the items to wrap 
    * Remember this is the same as:
@@ -27,7 +28,31 @@ EDIT ON
   padding: 0;
   margin: 0;
   list-style: none;
+ 
 }
+
+.flex-container > li{
+  list-style: none;
+  margin-left: 3em;
+  margin-top: 3em;
+  display: inline-block;
+  font-size: 1em;
+  
+  
+}
+.flex-container > li > figure{
+  display: block;
+  background-color:gray;
+  border: solid .5em rgba(128, 128, 128, 0.171);
+  width: 10em;
+  height: 10em;
+  border-radius: .5em;
+
+}
+
+
+
+
 
 .flex-item {
   background: tomato;
