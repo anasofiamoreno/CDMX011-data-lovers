@@ -28,8 +28,10 @@ propertyFiltro1 = propertyFiltro1.filter(function(exc) {
   }
 });
 
-     addOptions(propertyFiltro1) //llena el selector del filtro 1
-     //addListPok(data) //Muestra todos los pokemons en pantalla
+addOptions(propertyFiltro1) //llena el selector del filtro 1
+addPropFiltro2();
+filtrar();
+//addListPok(data) //Muestra todos los pokemons en pantalla
 
 
 
