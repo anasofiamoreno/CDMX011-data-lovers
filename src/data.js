@@ -1,7 +1,9 @@
+export function filterData(data, filtroUno, filtroDos){
 
-export const filterData = (data, filtroUno, filtroDos) => {
+let evolution;
 
-  const objDataFilt =  data.pokemon.filter(function(data) {
+  let objDataFilt =  data && data.pokemon.filter(function(data) {
+    
     if(typeof data[filtroUno] == "object"){
 
       if(typeof data[filtroUno].length == "undefined"){ 
@@ -9,6 +11,22 @@ export const filterData = (data, filtroUno, filtroDos) => {
         if(parseInt(data[filtroUno][filtroDos]) >= parseInt(document.getElementById("nivel").value)){
           return true
         }
+        
+         //console.log(data.evolution["next-evolution"][0].name);
+         //console.log(Object.values(data.evolution["next-evolution"]));
+          if(Object.prototype.hasOwnProperty.call(data.evolution,filtroDos)){
+            if(data.name=="wartortle"){
+              evolution = data.evolution[filtroDos][0].name;
+              console.log(evolution);
+            }
+          }
+          //console.log("Condicion "+ data.name +  " " + evolution);
+          if(data.name===evolution){
+            console.log("yes");
+            return true
+          }
+          
+
       }
 
 
@@ -49,7 +67,7 @@ export const filterData = (data, filtroUno, filtroDos) => {
   */
 
   return objDataFilt
-};
+}
 
 
 export const sortData=(data, objFilAlfabNum, objFilAscDsc)=>{
