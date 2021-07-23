@@ -105,17 +105,3 @@ export const sortData=(data, objFilAlfabNum, objFilAscDsc)=>{
 
    }
 }
-
-export const fnFiltradoTipo = (data2) => {
-  
-  //respuesta = respuesta + data['pokemon'][i]['type'];
-  
-  //console.log(Object.keys(data.pokemon[0].name));
-  console.log(data2);
-
-  
-  
-  //return respuesta;
- 
-};
-

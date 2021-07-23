@@ -166,16 +166,14 @@ function addPropFiltro2() {
 }
 
 function filtrar() {
-  console.log(objFiltroUno.value, objFiltroDos.value, objFilTres.value, objFilTres.value);
   const objInfoFil = filterData(data, objFiltroUno.value, objFiltroDos.value, objFilTres.value);
-  console.log(objInfoFil);
-  objFilAlfabNum=objFilAlfabNumRes;
-  objFilAscDsc=objFilAscDscRes;
+  //objFilAlfabNum=objFilAlfabNumRes;
+  //objFilAscDsc=objFilAscDscRes;
   const objInfFilOrg= sortData(objInfoFil,objFilAlfabNum.value,objFilAscDsc.value);
   
   var listPok = objInfFilOrg.map(function(pok){
     
-    return '<li> <div class="boxTarjeta"><div class="boxImg"><figure><a href=pokemon.html><img src='+pok.img+'></a></figure></div><div class="boxInf"><p class="namePok">'+pok.name+'</p><p><span class="texto">Tipo:</span>'+traductor(pok.type)+' </p><p><span class="texto">Fuerte Contra:</span> '+traductor(pok.resistant)+'</p> <p> <span class="texto">Debil Contra:</span> '+traductor(pok.weaknesses)+'</p><p><span class="texto">Ataque Base:</span> '+pok.stats['base-attack']+'</p><p> <span class="texto">Defensa Base:</span> '+pok.stats['base-defense']+'</p></div></div></li>' 
+    return '<li> <div class="boxTarjeta"><div class="boxImg"><figure><a href=pokemon.html><img src='+pok.img+'></a></figure></div><div class="boxInf"><p class="namePok">'+"No."+Number(pok.num)+"&nbsp;&nbsp;"+pok.name+'</p><p><span class="texto">Tipo:</span>'+traductor(pok.type)+' </p><p><span class="texto">Fuerte Contra:</span> '+traductor(pok.resistant)+'</p> <p> <span class="texto">Debil Contra:</span> '+traductor(pok.weaknesses)+'</p><p><span class="texto">Ataque Base:</span> '+pok.stats['base-attack']+'</p><p> <span class="texto">Defensa Base:</span> '+pok.stats['base-defense']+'</p></div></div></li>' 
   })
   document.getElementById("listPok").innerHTML = listPok.join("");
 
