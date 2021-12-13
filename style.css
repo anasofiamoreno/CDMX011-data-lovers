@@ -1,8 +1,373 @@
-div[id="panelinformacion"]{
-    width: 400px;
-    height: 300px;
-    border: black 1px solid;
-    position: absolute;
-    top: 140px; left: 400px;
+*{
+ padding: 0;
+ margin: 0;
+}
+  
+body{
+ font-size: 13px;
+ background: var(--Light-grayish-blue);
+ font-family: 'Cabin', sans-serif;
+ color: var(--Very-dark-grayish-blue)
+}
+
+:root{
+ --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+ --White: hsl(0, 0%, 100%);
+ --Light-gray: hsl(0, 0%, 81%);
+ --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+.header{ 
+ background-image: url("https://fontmeme.com/permalink/210720/ddd511b46c6d80e4c89c4d1190d8b262.png");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-color:rgb(51,96,166);
+  width: 100%;
+ height: 30vh;
+ position: relative;
+ z-index: -1;
+}
+
+
+
+
+h1{
+ font-size: 2em;
+ margin: 1.5em;
+ color: var(--Very-dark-grayish-blue);
+ font-weight: 700;
+ text-align: center;
+}
+
+.flex-container {
+  display: grid;
+  block-size: 100vh;
+  margin: 0 auto;
+  grid-gap: 1em;
+  grid-template-areas: "sec-1 sec-2";
+  grid-template-columns: 19em 1fr;
+  
+}
+
+.imgFiltro img{
+    
+  margin-top: 1em;
+  size: contain;
+    
+
+}
+select{
+  margin: 0em 1em 0 1em;
+  font-size: 1em;
+  height: 2em;
+  padding: 5px;
+  width: 13em;
+  color:gray;
+}
+  
+
+.input{
+  margin: 1em 1em 0 1em;
+  font-size: 1em;
+  height: 2em;
+  width: 5em;
+  color:gray;
+}
+.bttn{
+  margin: 1em 1em 0 0em;
+  font-size: 1em;
+  height: 2em;
+  width: 5em;
+  background: rgb(255, 205, 43);
+  color:rgb(51,96,166);
+  border-radius: .5em;
+  font-size: 1.1em;
+  font-weight: bold; 
+}
+ 
+
+.boxFilter{
+  grid-area: sec-1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: inline;
+}
+
+.boxPok{
+  grid-area: main;
+  grid-column-start: auto;
+  grid-column-end: 4;
+  display: flex;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  flex-basis: auto;
+  justify-content: space-around;
+  list-style: none;
+  background-size:25%;
+  height: 100%;
+  width: auto;
+  margin-right: 4em;
+  background-image:linear-gradient(rgba(200, 200, 207, 0.9),rgba(82, 82, 85, 0.9)),url(img/BackGround_gris0.png);
+  z-index: -1;
+  margin-bottom: 2em;
+}
+
+
+.boxPok > li{
+  list-style: none;
+  margin: 3em;
+  display:block;
+  font-size: 1em;
+  opacity: 1; 
+}
+
+.boxTarjeta{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;  
+}
+
+.boxMenuFilt{
+  display: flex;
+  flex-flow: column wrap;
+  background:linear-gradient( rgb(245,61,59,.9), rgb(245,61,59,.7)) ;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  align-items: center;
+  margin-left: 2em;
+}
+
+.boxImg{
+  display:flex;
+  background:rgb(204, 204, 125);
+  height: 220px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+
+.boxInf{
+  display: block;
+  background: rgb(218, 218, 179);
+  width: 220px;
+  height: 220px;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+.texto{
+  font-size: 1.2em;
+  padding-right: .2em; 
+}
+
+p{
+  font-size: 1.1em;
+}
+
+.namePok{
+  font-size: 1.5em;
+  text-align: left;
+  text-transform:capitalize;
+  padding-top: .5em;
+  padding-bottom: .5em; 
+}
+
+.visible{
+  display: block;
+  font-size: 1em;
+  margin-top: 2em;
+  align-items: center; 
+}
+
+.visbleAscDsc{
+  display: block;
+} 
+
+.invisible{
+  display: none;
+}
+
+.visibleFilTres{
+  display: block;
+}
+
+.txtLabel{  
+  font-size: 1.2em;
+  margin-top: 1em;
+  padding-left: .5em;
+  color: rgb(51,96,166);
+  font-weight: bold;
+}
+
+#nivel{
+  width: 3em;
+  margin-left: .4em;
+  margin-right: .4em;
+}
+
+.FindNomNum{
+  font-size: 1.3em;
+  color: rgb(51,96,166);
+  font-weight: bold;
+  margin-bottom: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
+  
+}
+
+.inputNomNum{
+  color: gray;
+  font-size: .8em;
+  width: 10em;
+}
+
+
+.FindNomNum > p >select{
+  margin: 0em 1em 0 1em;
+  font-size: .8em;
+  width: 8em;
+  color:gray;
+  font-size: .7em;
+}
+
+.MagIzq{
+  float: left;
+}
+
+.MagDer{
+  float: right; 
+}
+#OrdRep{
+  display: none;
+}
+#MarDerRep{
+  display: block;
+}
+
+.fooder{
+  size: 2em;
+  position: relative;
+  text-align: center;
+  
+}
+  
+
+@media only screen and (max-width:749px) and  (min-width:360px){
+   
+ 
+  
+
+    h1{
+    font-size: 1.5em;
+    }
+
+    .header{
+      background-size: contain;
+    }
+  
+    .flex-container {
+  
+      
+      flex-direction: column;
+      height: auto;
+      block-size: auto;
+      grid-gap: 1em;
+      display: inline;
+     
+      
+      
+      
+    }
+ 
+    .boxFilter{
+      height: auto;
+      grid-column: 1 / 1;
+      justify-content: center;
+      align-items: center;
+     
+    }
+   
+    
+    .boxPok{
+     
+      height: auto;
+      grid-column: 1 / 1;
+      margin-top: 2em;
+      margin-right: 1em;
+      margin-left: 1em;
+    
+      
+    }
+
+    .boxInf{
+      display: block;
+      width: 150px;
+      padding-left: .5em;
+      padding-bottom: 1em;
+    }
+    
+    .boxPok > li{
+      margin: 1em; 
+    }
+
+    .boxMenuFilt{
+      justify-content: center;
+      align-items: center;
+      margin-right: 1em;
+      margin-left: 1em; 
+    }
+
+    .FindNomNum{
+      margin-bottom: 1em;
+    }
+
+    .FindNomNum > input{
+      align-items: center;
+    }
+
+    .FindNomNum > p >select{
+      margin-top: 1em;   
+    }
+
+       
+    .MagIzq{
+      margin-bottom: 1em;
+      float: none;
+    }
+      
+    .MagDer{
+      float: none;
+      text-align: right; 
+    }
+ 
+    #OrdRep{
+      display:block;        
+    }
+
+    #MarDerRep{
+      display: none;
+    }
+
+    .MagDerRes{
+      font-size: 1.3em;
+      color: rgb(51,96,166);
+      font-weight: bold;
+      margin-top: 1em;
+       margin-right: 2em;
+      text-align: right;
+    } 
+
+    .MagDerRes > select{
+        
+      font-size: .8em;
+      width: 8em;
+      color:gray;
+      font-weight: bold;
+      margin-top: .5em;
+    }
     
 }

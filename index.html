@@ -2,50 +2,89 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <title>POKEdex</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>POKEdex<header>
-    <h1>De que poquemon quieres saber informacion?</h1>
+    <header class="header"></header>
 
-    <form id="formentradadedatos">
-      <p>Menu de Filtrado</p>
-      <p>test4</p>
-
-
-
-      <select name="filtrouno" id="filtrouno">
-        <option value="Numero de pokemon">Numero de Pokemon</option>
-        <option value="Tipo de Pokemon">Tipo de Pokemon</option>
-      </select>
-
-      <input id=txbxnumeropokemon type="number"></p>
-
-      <select name="filtrodos" id="filtrodos">
-        <option value="dato1">Dato1</option>
-        <option value="dato2">Dato2</option>
-      </select>
-
-      
-
-      <input id="btnbuscar" type="button" value="Buscar">
-
-    </form>
-
-    <form id="formsalidadedatos">
-      <div id="panelinformacion">
-        <input id=txbxnumeropokemon type="number"></p>
+    <main>
+     <h1>De que pokemón quieres saber información?</h1><!--Menu Superior-->
+      <div class="FindNomNum">
+        <p class="MagIzq"><!--Buscar por Nombre o Numero-->
+        <label >Buscar por Nombre/Número:</label> 
+        <input  class="inputNomNum"  id="FindNomNumber">
+        </p> 
+        <p id="MarDerRep" class="MagDer"><!--Ordenar Por Orden Alfabetico/No y Ascendente/Des  Superior-->
+          <label >Ordenar Albafabaticamente/Núm:</label>
+          <br>
+          <select id="AlfNum">
+            <option>Alfabetico</option>
+            <option>Número</option>
+          </select>
+          <select id="OrdAscDesc">
+            <option>Ascendente</option>
+            <option>Descendente</option>
+          </select>
+        </p>
+        <br>
       </div>
 
+      <div class="flex-container">
+          
+        <section class="boxFilter"> <!--Seccion de Filtros-->
+          <div class="boxMenuFilt">
+            <p class="imgFiltro"><img src="https://fontmeme.com/permalink/210716/4bfdd3146e2d4c6fd30bd04ba3c0d30f.png" alt="fuente-pokmon" border="0"></p>
+            <select  name="filtrouno" id="filtrouno"></select> <!--Se llena el selct desde js filtro1-->
+            <p class="imgFiltro"><img src="https://fontmeme.com/permalink/210716/14b56b314aff771cd8bfffe2981910ba.png" alt="fuente-pokmon" border="0"></p>
+            <div>
+              <select class="invisible" id="filtroTres"></select>
+            </div>
+            <div>
+              <select name="filtrodos" id="filtrodos"></select>
+            </div>
+                
+            <div id="puntoBase" class="invisible" >
+                  
+              <label class="txtLabel">Puntos: </label>
+              <input  type="number"  id="nivel" value="0">
+              <input class="bttn" id="btnbuscar" type="button" value="Buscar">
+                  
+            </div>
+          </div>
+        </section> 
 
+        <div id="OrdRep">
+        <p class="MagDerRes">
+          <label >Ordenar Albafabaticamente/Núm:</label>
+          <br>
+          <select id="AlfNumRes">
+            <option>Alfabetico</option>
+            <option>Número</option>
+          </select>
+          <br>
+          <select id="OrdAscDescRes">
+            <option>Ascendente</option>
+            <option>Descendente</option>
+          </select>
+        </p>
+        <br>
 
-    </form>
+      </div>
+          
+      <section >
+        <div class="boxPok" id="listPok"></div>
+      </section> <!--Se crea la lista de imag de cada pokemon desde js-->
 
-    <p id="test"> Texto de prueba </p>
+    </div> 
+         
+    </main>
 
-
-    <div id="root"></div>
+    <div id="root">
+      <p class="fooder">POWERED By Sofy Sofy ®</p>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
