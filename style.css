@@ -107,7 +107,7 @@ select{
   height: 100%;
   width: auto;
   margin-right: 4em;
-  background-image:linear-gradient(rgba(200, 200, 207, 0.9),rgba(82, 82, 85, 0.9)),url(img/BackGround_gris0.png);
+  background-image:linear-gradient(rgba(200, 200, 207, 0.9),rgba(82, 82, 85, 0.9)),url(https://raw.githubusercontent.com/anasofiamoreno/CDMX011-data-lovers/gh-pages/img/BackGround_gris0.png);
   z-index: -1;
   margin-bottom: 2em;
 }
